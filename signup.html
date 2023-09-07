@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Test Assignment</title>
+</head>
+<body>
+    <form action="backend/signup.php" method="POST">
+        <label for="username">Username</label>
+        <input type="email" name="username" id="username" placeholder="Email">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        <label for="account_type">Role</label>
+        <select name="account_type" id="account_type">
+            <option value="">Select a Role</option>
+            <option value="1">Regular</option>
+            <option value="2">Manager</option>
+        </select>
+
+        <input type="submit" value="Sign Up" id="submitButton">
+        <a href="index.html">Login</a>
+    </form>
+    
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            var nameField = document.getElementById("username");
+            var passwordField = document.getElementById("password");
+            var roleField = document.getElementById("account_type");
+            
+            if (nameField.value.trim() === "") {
+                alert("Please fill in the Username field.");
+                event.preventDefault(); 
+                return;
+            }
+
+            if (passwordField.value.trim() === "") {
+                alert("Please fill in the Password field.");
+                event.preventDefault();
+                return;
+            }
+            if(roleField.value === "") {
+                alert("Please select a Role for the account");
+                event.preventDefault(); 
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

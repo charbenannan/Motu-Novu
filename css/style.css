@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3; 
+    font-family: poppins;
+  }
+  h1, .del{
+    text-align:center;
+}
+td, th {
+    border: 1px solid #777;
+    padding: 0.5rem;
+    text-align: center;
+}
+ 
+table {
+    border-collapse: collapse;
+    margin: 0 auto;  
+}
+ 
+tbody tr:nth-child(odd) {
+    background: #928f8f;
+}
+caption {
+    font-size: 0.8rem;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 20px;
+    
+}
+.options input{
+  color: white;
+  background: #f2591d;
+  margin-right: 30px;
+  border: 1px solid;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+.del button{
+  color: white;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+  margin-left: 50px;
+}
